@@ -4,16 +4,12 @@ const { sequelize } = require("./db");
 const noteRoutes = require("./routes/Note.routes");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.DB_PORT;
 
 // Middleware
 
 app.use((req, res, next) => {
-  const allowedOrigins = [
-    "http://localhost:3000",
-    "http://localhost:3002",
-    "http://localhost:3001",
-  ];
+  const allowedOrigins = ["https://deploy-challenge-three.vercel.app/"];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
