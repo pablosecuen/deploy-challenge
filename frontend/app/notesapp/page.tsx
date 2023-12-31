@@ -16,7 +16,7 @@ export default function NotesApp() {
   }, []);
 
   return (
-    <section className="flex  min-h-screen w-screen flex-col items-center justify-start p-24 gap-10">
+    <section className="flex  min-h-screen w-screen flex-col items-center justify-start md:p-24 pt-20 gap-10">
       <Header />
 
       {notes && <NotesContainer notes={notes} />}

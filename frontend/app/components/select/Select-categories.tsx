@@ -14,7 +14,7 @@ const SelectCategories = ({ categories, selectedCategory, onChange }: SelectCate
   return (
     <select
       value={selectedCategory}
-      className="bg-transparent border rounded-full text-white/80 pl-2"
+      className="bg-transparent border rounded-full h-10 text-white/80 pl-2 w-full"
       onChange={handleCategoryChange}
     >
       <option value="" className="bg-black border rounded-full text-white/80 pl-2">

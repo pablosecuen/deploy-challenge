@@ -31,7 +31,7 @@ const AddNoteModal: React.FC<ModalProps> = ({
             className="fixed inset-0 z-40 backdrop-filter backdrop-blur-md bg-transparent"
             onClick={closeModal}
           ></div>
-          <div className="fixed right-1/2 translate-x-1/2 top-1/2 z-50 -translate-y-1/2 w-96 h-auto text-white backdrop-blur-2xl bg-white/10 flex flex-col justify-center gap-4 p-4 rounded-2xl animate-fadein">
+          <div className="fixed right-1/2 translate-x-1/2 top-1/2 z-50 -translate-y-1/2 w-80 md:w-96 h-auto text-white backdrop-blur-2xl bg-white/10 flex flex-col justify-center gap-4 p-4 rounded-2xl animate-fadein">
             <span className="text-center font-bold uppercase tracking-widest">
               Add your new note
             </span>
@@ -42,8 +42,8 @@ const AddNoteModal: React.FC<ModalProps> = ({
                 type="text"
                 name="title"
                 value={title}
+                className="text-black pl-2"
                 onChange={handleChange}
-                className="pl-2 text-black"
               />
             </div>
             <div className="flex flex-col">
@@ -51,7 +51,7 @@ const AddNoteModal: React.FC<ModalProps> = ({
                 id="category"
                 name="category"
                 value={category}
-                className="bg-transparent border rounded-full text-white/80 pl-2"
+                className="bg-transparent border  text-white/80 pl-2 h-10"
                 onChange={handleChange}
               >
                 <option value="" className="bg-black border rounded-full text-white/80 pl-2">

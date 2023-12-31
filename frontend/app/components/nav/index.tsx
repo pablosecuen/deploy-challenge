@@ -37,22 +37,26 @@ const Navbar: React.FC<NavbarProps> = ({ handleToggle }) => {
   };
 
   return (
-    <nav className="absolute border rounded-2xl justify-evenly  px-4 py-2 top-0 w-full right-1/2 translate-x-1/2 text-black grid grid-cols-4 gap-2 ">
-      <input
-        type="text"
-        placeholder="Buscar por título"
-        className="bg-transparent border rounded-full text-white/80 pl-2"
-        value={searchValue}
-        onChange={handleInputChange}
-      />{" "}
-      <SearchButton onClick={handleTitleSearch} color="blue" />{" "}
-      <SelectCategories
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onChange={handleCategoryChange}
-      />
-      <div className=" flex justify-center items-center">
-        <Toogle handleToggle={handleToggle} />
+    <nav className="md:absolute md:w-full  border rounded-2xl w-[360px] mx-auto  justify-evenly my-2 md:my-0  px-4 py-6 md:px-0 md:py-2 top-0  right-1/2 md:translate-x-1/2  text-black grid md:flex gap-2 ">
+      <div className="flex justify-around  mdL:w-1/2">
+        <input
+          type="text"
+          placeholder="Buscar por título"
+          className="bg-transparent border rounded-full text-white/80 pl-2 placeholder:pl-2"
+          value={searchValue}
+          onChange={handleInputChange}
+        />{" "}
+        <SearchButton onClick={handleTitleSearch} color="green" />{" "}
+      </div>
+      <div className="flex justify-around  md:w-1/2">
+        <SelectCategories
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onChange={handleCategoryChange}
+        />
+        <div className=" w-full flex  justify-end items-center md:pr-4">
+          <Toogle handleToggle={handleToggle} />
+        </div>
       </div>
     </nav>
   );

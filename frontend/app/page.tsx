@@ -9,7 +9,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-evenly p-24 gap-10 ">
+    <main className="flex min-h-screen flex-col items-center justify-evenly p-4 md:p-24 gap-10 ">
       <h1>Werlcome to my Notes App ! By Pablo Amico</h1>
       <Link href="/notesapp" className="py-2 px-4 border rounded-2xl">
         Please Login to continue

@@ -19,33 +19,17 @@ const NoteCard = ({ titleFilter, categoryFilter, showArchived, filteredNotes }: 
 
   return (
     <div>
-      <div className="flex flex-col " ref={parent}>
+      <div className="pl-2 flex flex-col w-full" ref={parent}>
         {!filteredNotes.length && (titleFilter || categoryFilter || showArchived) && (
-          <span className="animate-fadein pb-2">
-            No se encontraron resultados con los filtros aplicados
-          </span>
+          <span className="animate-fadein pb-2">No results found with the applied filters</span>
         )}
-        {titleFilter && (
-          <span className="animate-fadein  pb-2">Filtro por título: {titleFilter}</span>
-        )}
+        {titleFilter && <span className="animate-fadein pb-2">Filter by title: {titleFilter}</span>}
         {categoryFilter && (
-          <span className="animate-fadein  pb-2">Filtro por categoría: {categoryFilter}</span>
+          <span className="animate-fadein pb-2">Filter by category: {categoryFilter}</span>
         )}
-        {showArchived && <span className="animate-fadein  pb-2">Mostrar archivados</span>}
+        {showArchived && <span className="animate-fadein pb-2">Show archived</span>}
       </div>
-      {/*   <ul className="w-full flex flex-col gap-1" ref={parent}>
-        {filteredNotes.length > 0 ? (
-          filteredNotes.map((note) => (
-            <li key={note.ID} className="mb-2">
-              <Notes notes={note} />
-            </li>
-          ))
-        ) : (
-          <div>
-            <Skeleton count={filteredNotes.length} circle={true} baseColor="#000000" width="%100" />
-          </div>
-        )}
-      </ul> */}
+
       <ul className="w-full flex flex-col gap-1" ref={parent}>
         {isLoading ? (
           <div className={`animate-fadeOut ${isLoading ? "" : "animate-fadeIn"}`}>
@@ -53,12 +37,12 @@ const NoteCard = ({ titleFilter, categoryFilter, showArchived, filteredNotes }: 
           </div>
         ) : filteredNotes.length > 0 ? (
           filteredNotes.map((note) => (
-            <li key={note.ID} className="mb-2 animate-fadein">
+            <li key={note.ID} className="mb-2 animate-fadein w-full">
               <Notes notes={note} />
             </li>
           ))
         ) : (
-          <span>No notes available</span>
+          <span className="animate-fadein pb-2 pl-2">No notes available</span>
         )}
       </ul>
       <Toaster />

@@ -76,7 +76,7 @@ const NotesContainer: React.FC<NotesContainerProps> = () => {
   }, [titleFilter, categoryFilter, showArchived]);
 
   return (
-    <div className="max-w-2xl  w-full min-h-[50vh] border-2 px-20 pt-20 border-white/40 rounded-3xl overflow-y-hidden relative overflow-x-hidden">
+    <div className="max-w-2xl   md:w-full min-h-[50vh] md:border-2 md:px-10 md:pt-20 border-white/40 rounded-3xl overflow-y-hidden relative md:overflow-x-hidden">
       <Toaster />
       <Navbar
         handleTitleFilter={(value) => setTitleFilter(value)}

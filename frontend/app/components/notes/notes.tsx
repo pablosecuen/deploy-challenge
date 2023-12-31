@@ -92,20 +92,20 @@ const Notes = ({ notes }: NoteComponentProps) => {
 
   return (
     <div ref={parent}>
-      <div className=" px-4 py-2 flex justify-between items-center  border rounded-2xl">
+      <div className=" px-4 py-2 flex justify-between items-center  border rounded-2xl w-[360px] mx-auto md:w-[600px]">
         <strong
-          className="dropdown-label cursor-pointer justify-between font-semibold tracking-wider flex items-center gap-2"
+          className="dropdown-label cursor-pointer justify-between font-semibold tracking-wider flex items-center gap-2 w-full"
           onClick={reveal}
         >
           <span className="text-center flex cursor-pointer hover:animate-pulse">{notes.title}</span>
-        </strong>
-        <div className="flex items-center gap-6">
-          <span className="text-sm opacity-60 italic font-thin tracking-widest">
+          <span className="text-sm opacity-60 italic font-thin tracking-widest pr-4">
             {notes.category}
           </span>
+        </strong>
+        <div className="flex items-center gap-6">
           <span
             onClick={reveal}
-            className="cursor-pointer hover:scale-125 hover:brightness-200 transition duration-300"
+            className="cursor-pointer hover:scale-125 hover:brightness-200 transition duration-300 mt-1"
             title="Expand Note"
           >
             <DetailsIcon />
