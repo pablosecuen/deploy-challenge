@@ -185,7 +185,7 @@ const Notes = ({ notes }: NoteComponentProps) => {
                 <div className="flex justify-between">
                   {" "}
                   <span className="text-xl animate-fadein text-start max-w-[300px] break-words">
-                    {notes.title} 
+                    {notes.title}
                   </span>
                   {notes.category && (
                     <span className="text-sm opacity-80 italic font-thin tracking-widest">
@@ -220,7 +220,15 @@ const Notes = ({ notes }: NoteComponentProps) => {
           )}
         </div>
       )}
-      <ConfirmationModal show={showConfirmation} onClose={closeModal} onConfirm={confirmDelete} />
+      {showConfirmation && (
+        <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50">
+          <ConfirmationModal
+            show={showConfirmation}
+            onClose={closeModal}
+            onConfirm={confirmDelete}
+          />
+        </div>
+      )}
     </div>
   );
 };
