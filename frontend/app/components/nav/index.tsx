@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ handleToggle }) => {
   };
 
   return (
-    <nav className="md:absolute md:w-full  border rounded-2xl w-[360px] mx-auto  justify-evenly my-2 md:my-0  px-4 py-6 md:px-0 md:py-2 top-0  right-1/2 md:translate-x-1/2  text-black grid md:flex gap-2 ">
+    <nav className="md:absolute md:w-full  border rounded-3xl w-[360px] mx-auto  justify-evenly my-2 md:my-0  px-4 py-6 md:px-0 md:py-2 top-0  right-1/2 md:translate-x-1/2  text-black grid md:flex gap-2 ">
       <div className="flex justify-around  mdL:w-1/2">
         <input
           type="text"
