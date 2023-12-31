@@ -1,0 +1,41 @@
+# Carpeta node_modules generada por npm/yarn
+node_modules/
+
+# Archivos creados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de registro
+*.log
+
+# Carpeta que contiene archivos compilados
+dist/
+
+# Archivo .env para configuraciones sensibles
+.env
+
+# Entornos específicos
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependencias específicas de IDE
+.idea/
+.vscode/
+
+# Archivos de construcción o salida
+build/
+out/
+
+# Archivos de caché
+.cache/
+
+# Archivos de configuración local
+*.conf
+
+# Archivos temporales
+*.tmp
+
+# Cualquier archivo que termine con .swp
+*.swp

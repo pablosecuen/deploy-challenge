@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
+    rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+}
+
+.custom-button {
+  /* Estilos base para los botones usando apply para poder incorporar las clases de tailwind */
+  @apply animate-fadein border text-white font-bold px-4 py-2 rounded-full shadow-sm shadow-black/40 hover:translate-y-[-3px] transition duration-300 hover:shadow-md hover:shadow-black/60;
+}
