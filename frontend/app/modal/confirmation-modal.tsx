@@ -17,8 +17,8 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({ show, onClose, on
       <div className="modal-content">
         <span>Are you sure you want to delete this note?</span>
         <div className="modal-buttons flex gap-4 mt-4">
-          <CancelButton onClick={onClose} />
-          <DeleteButton onClick={onConfirm} />
+          <CancelButton onClick={onClose} color="purple" />
+          <DeleteButton onClick={onConfirm} color="red" />
         </div>
       </div>
     </div>
