@@ -185,7 +185,7 @@ const Notes = ({ notes }: NoteComponentProps) => {
                 <div className="flex justify-between">
                   {" "}
                   <span className="text-xl animate-fadein text-start max-w-[300px] break-words">
-                    {notes.title} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    {notes.title} 
                   </span>
                   {notes.category && (
                     <span className="text-sm opacity-80 italic font-thin tracking-widest">
@@ -204,7 +204,7 @@ const Notes = ({ notes }: NoteComponentProps) => {
                 </div>
 
                 <p className="dropdown-content max-w-[300px] pt-4 animate-fadein break-words text-md opacity-80">
-                  {notes.content}aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  {notes.content}
                 </p>
               </div>
               <div className="flex justify-between mt-4">
