@@ -45,7 +45,9 @@ export const FilterContextProvider: React.FC<{ children: React.ReactNode }> = ({
       }
 
       const queryString = queryParams.join("&");
-      const response = await fetch(`http://localhost:3000/notes?${queryString}`);
+      const response = await fetch(
+        `https://ensolvers-challenge-server.onrender.com/notes?${queryString}`
+      );
       const { notes } = await response.json();
 
       let filteredNotes = [];

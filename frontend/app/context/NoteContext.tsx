@@ -19,10 +19,11 @@ export const NoteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [notes, setNotes] = useState<NoteItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  const baseUrl = "https://ensolvers-challenge-server.onrender.com";
   const createNote = async (newNote: NoteItem) => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/notes", {
+      const response = await fetch(`${baseUrl}/notes`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +46,7 @@ export const NoteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const fetchNotes = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/notes");
+      const response = await fetch(`${baseUrl}/notes`);
       const result = await response.json();
       if (!response.ok) {
         throw new Error("Failed to fetch notes");
@@ -63,7 +64,7 @@ export const NoteProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsLoading(true);
 
     try {
-      const response = await fetch(`http://localhost:3000/notes/${noteId}`, {
+      const response = await fetch(`${baseUrl}/notes/${noteId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +88,7 @@ export const NoteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const archiveNote = async (noteId: string, archived: boolean) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/notes/${noteId}`, {
+      const response = await fetch(`${baseUrl}/notes/${noteId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -115,7 +116,7 @@ export const NoteProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const deleteNote = async (noteId: string) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/notes/${noteId}`, {
+      const response = await fetch(`${baseUrl}/notes/${noteId}`, {
         method: "DELETE",
       });
 
