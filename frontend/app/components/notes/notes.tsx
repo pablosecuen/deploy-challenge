@@ -127,9 +127,9 @@ const Notes = ({ notes }: NoteComponentProps) => {
         </div>
       </div>
       {show && (
-        <div className="transition-opacity p-4  border border-white/20 mt-2 rounded-lg shadow-sm shadow-white/40">
+        <div className="transition-opacity p-4  border border-white/20 mt-2 md:ml-2 rounded-lg shadow-sm shadow-white/40">
           {editMode ? (
-            <div className="animate-fadein text-black">
+            <div className="animate-fadein  w-[330px]  md:w-full text-black">
               <div className="mb-2  animate-fadein flex gap-2">
                 <div>
                   <label htmlFor="titleInput" className=" text-white font-semibold">
@@ -173,7 +173,7 @@ const Notes = ({ notes }: NoteComponentProps) => {
               </div>
               <div className="flex justify-between items-center">
                 {" "}
-                <SaveButton onClick={handleSaveChanges} color="blue" />
+                <SaveButton onClick={handleSaveChanges} color="green" />
                 <CancelButton onClick={toggleEditMode} color="red" />
               </div>
             </div>
