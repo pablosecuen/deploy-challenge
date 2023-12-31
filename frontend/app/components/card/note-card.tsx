@@ -20,9 +20,6 @@ const NoteCard = ({ titleFilter, categoryFilter, showArchived, filteredNotes }: 
   return (
     <div>
       <div className="pl-2 flex flex-col w-full" ref={parent}>
-        {!filteredNotes.length && (titleFilter || categoryFilter || showArchived) && (
-          <span className="animate-fadein pb-2">No results found with the applied filters</span>
-        )}
         {titleFilter && <span className="animate-fadein pb-2">Filter by title: {titleFilter}</span>}
         {categoryFilter && (
           <span className="animate-fadein pb-2">Filter by category: {categoryFilter}</span>
