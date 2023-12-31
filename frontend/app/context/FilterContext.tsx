@@ -31,7 +31,7 @@ export const FilterContextProvider: React.FC<{ children: React.ReactNode }> = ({
   const [showArchived, setShowArchived] = useState<boolean>(false);
   const [filteredNotes, setFilteredNotes] = useState<NoteItem[]>([]);
 
-  console.log(filteredNotes);
+
   const applyFilters = useCallback(async () => {
     try {
       const queryParams = [];
