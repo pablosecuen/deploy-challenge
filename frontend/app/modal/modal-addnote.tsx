@@ -37,7 +37,14 @@ const AddNoteModal: React.FC<ModalProps> = ({
             </span>
             <div className="flex flex-col">
               <label htmlFor="title">Title: {title}</label>
-              <input id="title" type="text" name="title" value={title} onChange={handleChange} />
+              <input
+                id="title"
+                type="text"
+                name="title"
+                value={title}
+                onChange={handleChange}
+                className="pl-2 text-black"
+              />
             </div>
             <div className="flex flex-col">
               <select
@@ -75,6 +82,7 @@ const AddNoteModal: React.FC<ModalProps> = ({
                 name="content"
                 value={content}
                 onChange={handleChange}
+                className="pl-2 text-black"
               ></textarea>
             </div>
             <div className="flex w-full justify-evenly">
