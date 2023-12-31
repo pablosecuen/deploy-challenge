@@ -10,7 +10,13 @@ if (DB_NAME && DB_USER && DB_PASSWORD && DB_HOST) {
   const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
     host: DB_HOST,
     dialect: "postgres",
-    logging: true,
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   });
 
   const Note = require("./models/Note.model")(sequelize);
