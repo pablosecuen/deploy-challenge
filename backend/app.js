@@ -9,7 +9,7 @@ const PORT = process.env.DB_PORT;
 // Middleware
 
 app.use((req, res, next) => {
-  const allowedOrigins = ["https://deploy-challenge-three.vercel.app/"];
+  const allowedOrigins = ["https://deploy-challenge-three.vercel.app"];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
