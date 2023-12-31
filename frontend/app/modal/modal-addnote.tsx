@@ -86,7 +86,7 @@ const AddNoteModal: React.FC<ModalProps> = ({
               ></textarea>
             </div>
             <div className="flex w-full justify-evenly">
-              <SaveButton onClick={handleSaveNote} color="blue" />
+              <SaveButton onClick={handleSaveNote} color="green" />
 
               <CancelButton onClick={closeModal} color="red" />
             </div>

@@ -89,7 +89,7 @@ const NotesContainer: React.FC<NotesContainerProps> = () => {
         showArchived={showArchived}
         filteredNotes={filteredNotes}
       />
-      <AddNote openModal={openModal} color="blue" />
+      <AddNote openModal={openModal} color="green" />
       <AddNoteModal
         isModalOpen={isModalOpen}
         closeModal={closeModal}
