@@ -97,7 +97,9 @@ const Notes = ({ notes }: NoteComponentProps) => {
           className="dropdown-label cursor-pointer justify-between font-semibold tracking-wider flex items-center gap-2 w-full"
           onClick={reveal}
         >
-          <span className="text-center flex cursor-pointer hover:animate-pulse">{notes.title}</span>
+          <span className="text-center flex cursor-pointer hover:animate-pulse">
+            {notes.title.substring(0, 20)}
+          </span>
           <span className="text-sm opacity-60 italic font-thin tracking-widest pr-4">
             {notes.category}
           </span>
@@ -182,7 +184,9 @@ const Notes = ({ notes }: NoteComponentProps) => {
               <div className="animate-fadein">
                 <div className="flex justify-between">
                   {" "}
-                  <span className="text-xl animate-fadein">{notes.title} </span>
+                  <span className="text-xl animate-fadein text-start max-w-[300px] break-words">
+                    {notes.title} aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                  </span>
                   {notes.category && (
                     <span className="text-sm opacity-80 italic font-thin tracking-widest">
                       Category: {notes.category}
@@ -193,13 +197,15 @@ const Notes = ({ notes }: NoteComponentProps) => {
                       archived
                     </span>
                   ) : (
-                    <span className=" animate-fadein  transition duration-300 px-2 py-1 rounded-3xl bg-green-800">
+                    <span className=" animate-fadein h-8  transition duration-300 px-2 py-1 rounded-3xl bg-green-800">
                       active
                     </span>
                   )}
                 </div>
 
-                <p className="dropdown-content pt-4 animate-fadein">{notes.content}</p>
+                <p className="dropdown-content max-w-[300px] pt-4 animate-fadein break-words text-md opacity-80">
+                  {notes.content}aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </p>
               </div>
               <div className="flex justify-between mt-4">
                 <DeleteButton onClick={handleDeleteNote} color="red" />
